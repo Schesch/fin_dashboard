@@ -6,14 +6,9 @@ from yaml.loader import SafeLoader
 
 st.set_page_config(page_title="Contracta Dashboard", page_icon=":bar_chart:", layout="centered")
 
-url = 'https://raw.githubusercontent.com/Schesch/accounting_dashboard/main/config_files/config.yaml'
-response = requests.get(url)
+with open('https://raw.githubusercontent.com/Schesch/accounting_dashboard/main/config_files/config.yaml', 'r') as file:
+    config = yaml.load(file, Loader=yaml.SafeLoader)
 
-if response.status_code == 200:
-    # Load YAML content from the fetched data
-    config = yaml.load(response.content, Loader=yaml.SafeLoader)
-else:
-    print(f"Failed to retrieve the YAML file: HTTP {response.status_code}")
 
 authenticator = stauth.Authenticate(
     config['credentials'],
