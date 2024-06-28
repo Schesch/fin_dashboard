@@ -1,0 +1,7 @@
+streamlit
+pandas
+PyYAML
+altair
+openpyxl
+streamlit-authenticator
+requests
