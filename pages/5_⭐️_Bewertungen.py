@@ -10,7 +10,7 @@ if not st.session_state.get('authentication_status', False):
     st.info('Bitte anmelden auf der Login Seite')
     st.stop()
 
-file_path = file_path = 'https://raw.githubusercontent.com/Schesch/accounting_dashboard/main/hotel_list.xlsx'
+file_path = 'https://raw.githubusercontent.com/Schesch/fin_dashboard/main/hotel_list.xlsx'
 df_rating = pd.read_excel(file_path)
 
 
