@@ -6,8 +6,9 @@ from yaml.loader import SafeLoader
 
 st.set_page_config(page_title="Contracta Dashboard", page_icon=":bar_chart:", layout="centered")
 
-with open('https://raw.githubusercontent.com/Schesch/accounting_dashboard/main/config_files/config.yaml', 'r') as file:
-    config = yaml.load(file, Loader=yaml.SafeLoader)
+url = 'https://raw.githubusercontent.com/Schesch/fin_dashboard/main/config_files/config.yaml'
+response = requests.get(url)
+config = yaml.load(response.content, Loader=yaml.SafeLoader)
 
 
 authenticator = stauth.Authenticate(
