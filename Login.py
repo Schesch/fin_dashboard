@@ -26,7 +26,7 @@ authenticator.login()
 if st.session_state["authentication_status"]:
     authenticator.logout()
     st.markdown("<div style='margin: 25px;'></div>", unsafe_allow_html=True)
-    st.image('https://raw.githubusercontent.com/Schesch/accounting_dashboard/main/contracta.png', width= 600, caption="Ihre Wirtschafts- und Steuerberatung: Contracta")
+    st.image('https://raw.githubusercontent.com/Schesch/fin_dashboard/main/contracta.png', width= 600, caption="Ihre Wirtschafts- und Steuerberatung: Contracta")
     st.markdown("<div style='margin: 25px;'></div>", unsafe_allow_html=True)
     st.header(f'Willkommen {st.session_state["name"]} bei Ihrem Finance Dashboard von Contracta')
     st.markdown("<div style='margin: 25px;'></div>", unsafe_allow_html=True)
